@@ -30,7 +30,7 @@ void processSection(const cv::Mat& input, cv::Mat& output, int startRow, int end
 }
 
 int main() {
-    std::string imagePath = "C:/Users/kamil/OneDrive/Bureau/CPMULTI/bg.png";  // Assurez-vous que l'image est bien à cet emplacement
+    std::string imagePath = "C:/Users/lo/Desktop/bbt/Nouveau dossier/CPMULTI/build/bg.png";  // Assurez-vous que l'image est bien à cet emplacement
     cv::Mat image = cv::imread(imagePath);
 
     if (image.empty()) {
