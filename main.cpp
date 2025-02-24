@@ -1,72 +1,38 @@
-#include <opencv2/opencv.hpp>
 #include <iostream>
-#include <chrono>
-#include <thread>
-#include <mutex>
-
-// Mutex pour protéger l'accès aux ressources partagées
-std::mutex mtx;
-
-// 📌 Appliquer un Flou Gaussien de manière séquentielle
-cv::Mat applyGaussianBlur(const cv::Mat& img) {
-    cv::Mat result;
-    cv::GaussianBlur(img, result, cv::Size(15, 15), 0);
-    return result;
-}
-
-// 📌 Appliquer la Détection de Contours (Canny)
-cv::Mat applyCannyEdgeDetection(const cv::Mat& img) {
-    cv::Mat edges;
-    cv::Canny(img, edges, 100, 200);
-    return edges;
-}
-
-// 📌 Traitement Multi-threadé : Diviser l'image en parties et appliquer un filtre
-void processSection(const cv::Mat& input, cv::Mat& output, int startRow, int endRow) {
-    cv::Mat section = input(cv::Range(startRow, endRow), cv::Range::all());
-
-    std::lock_guard<std::mutex> lock(mtx);  // Protection contre l'accès concurrent
-    cv::GaussianBlur(section, output(cv::Range(startRow, endRow), cv::Range::all()), cv::Size(15, 15), 0);
-}
+#include <opencv2/opencv.hpp>
+#include "traitement/index.hpp"
+#include "utilitaires/index.hpp"
+#include "multithreading/index.hpp"
 
 int main() {
-    std::string imagePath = "C:/Users/lo/Desktop/bbt/Nouveau dossier/CPMULTI/build/bg.png";  // Assurez-vous que l'image est bien à cet emplacement
-    cv::Mat image = cv::imread(imagePath);
+    cv::Mat image = utils::loadImage("../images/bg.png");
+
 
     if (image.empty()) {
-        std::cout << "Erreur : Impossible de charger l'image !" << std::endl;
+        std::cerr << "Erreur : Impossible de charger l'image !" << std::endl;
         return -1;
     }
 
-    // 📌 Mesurer le temps d'exécution SEQUENTIELLE
-    auto start_seq = std::chrono::high_resolution_clock::now();
-    cv::Mat blurred_seq = applyGaussianBlur(image);
-    auto stop_seq = std::chrono::high_resolution_clock::now();
-    auto duration_seq = std::chrono::duration_cast<std::chrono::milliseconds>(stop_seq - start_seq);
-    std::cout << "Temps d'exécution SEQUENTIELLE : " << duration_seq.count() << " ms" << std::endl;
-
-    // 📌 Initialisation pour le traitement multi-threadé
-    cv::Mat blurred_mt = image.clone();
-    int height = image.rows;
-
-    // 📌 Mesurer le temps d'exécution MULTI-THREADING
-    auto start_mt = std::chrono::high_resolution_clock::now();
+    std::vector<cv::Mat> results;
     
-    std::thread t1(processSection, std::ref(image), std::ref(blurred_mt), 0, height / 2);
-    std::thread t2(processSection, std::ref(image), std::ref(blurred_mt), height / 2, height);
+    auto startMT = std::chrono::high_resolution_clock::now();
+    multithreading::processFiltersParallel(image, results);
+    auto endMT = std::chrono::high_resolution_clock::now();
 
-    t1.join();
-    t2.join();
+    std::cout << "✅ Tous les filtres ont été appliqués en parallèle !" << std::endl;
+    std::cout << "⏳ Temps d'exécution MULTI-THREADING : " 
+              << std::chrono::duration_cast<std::chrono::milliseconds>(endMT - startMT).count() 
+              << " ms" << std::endl;
 
-    auto stop_mt = std::chrono::high_resolution_clock::now();
-    auto duration_mt = std::chrono::duration_cast<std::chrono::milliseconds>(stop_mt - start_mt);
-    std::cout << "Temps d'exécution MULTI-THREADÉ : " << duration_mt.count() << " ms" << std::endl;
-
-    // 📌 Affichage des résultats
-    cv::imshow("Image Originale", image);
-    cv::imshow("Flou Gaussien Séquentiel", blurred_seq);
-    cv::imshow("Flou Gaussien Multi-threadé", blurred_mt);
-    cv::waitKey(0);
+    // 🔹 Afficher les résultats
+    utils::displayImage("Gaussian Blur", results[0]);
+    utils::displayImage("Median Blur", results[1]);
+    utils::displayImage("Denoising", results[2]);
+    utils::displayImage("Canny Edge Detection", results[3]);
+    utils::displayImage("Sobel Edge Detection", results[4]);
+    utils::displayImage("Fourier Transform", results[5]);
+    utils::displayImage("Resized Image", results[6]);
+    utils::displayImage("Rotated Image", results[7]);
 
     return 0;
 }
