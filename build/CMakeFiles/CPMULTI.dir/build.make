@@ -83,14 +83,65 @@ CMakeFiles/CPMULTI.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CPMULTI.dir/main.cpp.s"
 	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\main.cpp" -o CMakeFiles\CPMULTI.dir\main.cpp.s
 
+CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.obj: CMakeFiles/CPMULTI.dir/flags.make
+CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.obj: CMakeFiles/CPMULTI.dir/includes_CXX.rsp
+CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.obj: C:/Users/lo/Desktop/bbt/Nouveau\ dossier/CPMULTI/traitement/traitement.cpp
+CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.obj: CMakeFiles/CPMULTI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.obj -MF CMakeFiles\CPMULTI.dir\traitement\traitement.cpp.obj.d -o CMakeFiles\CPMULTI.dir\traitement\traitement.cpp.obj -c "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\traitement\traitement.cpp"
+
+CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.i"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\traitement\traitement.cpp" > CMakeFiles\CPMULTI.dir\traitement\traitement.cpp.i
+
+CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.s"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\traitement\traitement.cpp" -o CMakeFiles\CPMULTI.dir\traitement\traitement.cpp.s
+
+CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.obj: CMakeFiles/CPMULTI.dir/flags.make
+CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.obj: CMakeFiles/CPMULTI.dir/includes_CXX.rsp
+CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.obj: C:/Users/lo/Desktop/bbt/Nouveau\ dossier/CPMULTI/multithreading/multithreading.cpp
+CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.obj: CMakeFiles/CPMULTI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.obj -MF CMakeFiles\CPMULTI.dir\multithreading\multithreading.cpp.obj.d -o CMakeFiles\CPMULTI.dir\multithreading\multithreading.cpp.obj -c "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\multithreading\multithreading.cpp"
+
+CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.i"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\multithreading\multithreading.cpp" > CMakeFiles\CPMULTI.dir\multithreading\multithreading.cpp.i
+
+CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.s"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\multithreading\multithreading.cpp" -o CMakeFiles\CPMULTI.dir\multithreading\multithreading.cpp.s
+
+CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.obj: CMakeFiles/CPMULTI.dir/flags.make
+CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.obj: CMakeFiles/CPMULTI.dir/includes_CXX.rsp
+CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.obj: C:/Users/lo/Desktop/bbt/Nouveau\ dossier/CPMULTI/utilitaires/utils.cpp
+CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.obj: CMakeFiles/CPMULTI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.obj"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.obj -MF CMakeFiles\CPMULTI.dir\utilitaires\utils.cpp.obj.d -o CMakeFiles\CPMULTI.dir\utilitaires\utils.cpp.obj -c "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\utilitaires\utils.cpp"
+
+CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.i"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\utilitaires\utils.cpp" > CMakeFiles\CPMULTI.dir\utilitaires\utils.cpp.i
+
+CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.s"
+	C:\PROGRA~1\mingw64\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\utilitaires\utils.cpp" -o CMakeFiles\CPMULTI.dir\utilitaires\utils.cpp.s
+
 # Object files for target CPMULTI
 CPMULTI_OBJECTS = \
-"CMakeFiles/CPMULTI.dir/main.cpp.obj"
+"CMakeFiles/CPMULTI.dir/main.cpp.obj" \
+"CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.obj" \
+"CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.obj" \
+"CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.obj"
 
 # External object files for target CPMULTI
 CPMULTI_EXTERNAL_OBJECTS =
 
 CPMULTI.exe: CMakeFiles/CPMULTI.dir/main.cpp.obj
+CPMULTI.exe: CMakeFiles/CPMULTI.dir/traitement/traitement.cpp.obj
+CPMULTI.exe: CMakeFiles/CPMULTI.dir/multithreading/multithreading.cpp.obj
+CPMULTI.exe: CMakeFiles/CPMULTI.dir/utilitaires/utils.cpp.obj
 CPMULTI.exe: CMakeFiles/CPMULTI.dir/build.make
 CPMULTI.exe: C:/opencv-4.11.0/opencv-4.11.0/build/lib/libopencv_gapi4110.dll.a
 CPMULTI.exe: C:/opencv-4.11.0/opencv-4.11.0/build/lib/libopencv_highgui4110.dll.a
@@ -110,7 +161,7 @@ CPMULTI.exe: C:/opencv-4.11.0/opencv-4.11.0/build/lib/libopencv_core4110.dll.a
 CPMULTI.exe: CMakeFiles/CPMULTI.dir/linkLibs.rsp
 CPMULTI.exe: CMakeFiles/CPMULTI.dir/objects1.rsp
 CPMULTI.exe: CMakeFiles/CPMULTI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable CPMULTI.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:\Users\lo\Desktop\bbt\Nouveau dossier\CPMULTI\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable CPMULTI.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\CPMULTI.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
