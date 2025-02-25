@@ -1,8 +1,8 @@
 # Filter Sequential Multi-threaded
-Gaussian_Blur 8 968
-Median_Blur 4 968
-Denoising 821 968
-Sobel_Edge 6 968
-Fourier_Transform 18 968
-Resize 0 968
-Rotate 2 968
+Gaussian_Blur 8 991
+Median_Blur 4 991
+Denoising 818 991
+Sobel_Edge 3 991
+Fourier_Transform 16 991
+Resize 0 991
+Rotate 2 991
