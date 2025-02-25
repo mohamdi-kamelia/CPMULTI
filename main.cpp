@@ -5,7 +5,7 @@
 #include "multithreading/index.hpp"
 
 int main() {
-    cv::Mat image = utils::loadImage("../images/bg.png");
+    cv::Mat image = utils::loadImage("../images/website.jpg");
 
 
     if (image.empty()) {
