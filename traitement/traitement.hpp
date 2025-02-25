@@ -2,6 +2,7 @@
 #define TRAITEMENT_HPP
 
 #include <opencv2/opencv.hpp>
+#include <vector> // Ajout nécessaire pour utiliser std::vector
 
 namespace traitement {
 
@@ -18,6 +19,9 @@ namespace traitement {
     cv::Mat applyFourierTransform(const cv::Mat& image);
     cv::Mat resizeImage(const cv::Mat& image, double scale);
     cv::Mat rotateImage(const cv::Mat& image, double angle);
+
+    // 🚀 Ajout de la fonction pour le traitement séquentiel
+    void processFiltersSequential(const cv::Mat& image, std::vector<cv::Mat>& results);
 
 }
 

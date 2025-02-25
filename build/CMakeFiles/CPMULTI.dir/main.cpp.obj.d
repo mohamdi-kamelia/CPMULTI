@@ -134,16 +134,26 @@ CMakeFiles/CPMULTI.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/ostream.tcc \
  C:/msys64/ucrt64/include/c++/13.2.0/istream \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/istream.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/vector \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_uninitialized.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
+ C:/msys64/ucrt64/include/c++/13.2.0/chrono \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/chrono.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/ratio \
+ C:/msys64/ucrt64/include/c++/13.2.0/cstdint \
+ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+ C:/msys64/ucrt64/include/stdint.h \
+ C:/msys64/ucrt64/include/c++/13.2.0/limits \
+ C:/msys64/ucrt64/include/c++/13.2.0/ctime \
+ C:/msys64/ucrt64/include/c++/13.2.0/bits/parse_numbers.h \
  C:/opencv-4.11.0/opencv-4.11.0/include/opencv2/opencv.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/build/opencv2/opencv_modules.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/cvdef.h \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/version.hpp \
- C:/msys64/ucrt64/include/c++/13.2.0/limits \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/hal/interface.h \
- C:/msys64/ucrt64/include/c++/13.2.0/cstdint \
- C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
- C:/msys64/ucrt64/include/stdint.h \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/cv_cpu_dispatch.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h \
@@ -181,7 +191,6 @@ CMakeFiles/CPMULTI.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/tr1/riemann_zeta.tcc \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/cvstd_wrapper.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/memory \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_uninitialized.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_raw_storage_iter.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/align.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/unique_ptr.h \
@@ -208,10 +217,6 @@ CMakeFiles/CPMULTI.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/cfloat \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/float.h \
  C:/msys64/ucrt64/include/float.h \
- C:/msys64/ucrt64/include/c++/13.2.0/vector \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_vector.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/stl_bvector.h \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/vector.tcc \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/mat.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/bufferpool.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/array \
@@ -234,10 +239,6 @@ CMakeFiles/CPMULTI.dir/main.cpp.obj: \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/node_handle.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/erase_if.h \
  C:/msys64/ucrt64/include/c++/13.2.0/mutex \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/chrono.h \
- C:/msys64/ucrt64/include/c++/13.2.0/ratio \
- C:/msys64/ucrt64/include/c++/13.2.0/ctime \
- C:/msys64/ucrt64/include/c++/13.2.0/bits/parse_numbers.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/std_mutex.h \
  C:/msys64/ucrt64/include/c++/13.2.0/bits/unique_lock.h \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/optim.hpp \
@@ -255,7 +256,6 @@ CMakeFiles/CPMULTI.dir/main.cpp.obj: \
  C:/opencv-4.11.0/opencv-4.11.0/modules/dnn/include/opencv2/dnn.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/modules/dnn/include/opencv2/dnn/dnn.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/modules/core/include/opencv2/core/async.hpp \
- C:/msys64/ucrt64/include/c++/13.2.0/chrono \
  C:/opencv-4.11.0/opencv-4.11.0/modules/dnn/include/opencv2/dnn/version.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/modules/dnn/include/opencv2/dnn/dict.hpp \
  C:/msys64/ucrt64/include/c++/13.2.0/map \
@@ -358,8 +358,7 @@ CMakeFiles/CPMULTI.dir/main.cpp.obj: \
  C:/opencv-4.11.0/opencv-4.11.0/modules/video/include/opencv2/video.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/modules/video/include/opencv2/video/tracking.hpp \
  C:/opencv-4.11.0/opencv-4.11.0/modules/video/include/opencv2/video/background_segm.hpp \
- C:\Users\kamil\OneDrive\Bureau\CPMULTI\traitement/index.hpp \
- C:\Users\kamil\OneDrive\Bureau\CPMULTI\traitement/traitement.hpp \
+ C:/Users/kamil/OneDrive/Bureau/CPMULTI/traitement/traitement.hpp \
  C:\Users\kamil\OneDrive\Bureau\CPMULTI\utilitaires/index.hpp \
  C:\Users\kamil\OneDrive\Bureau\CPMULTI\utilitaires/utils.hpp \
  C:\Users\kamil\OneDrive\Bureau\CPMULTI\multithreading/index.hpp \

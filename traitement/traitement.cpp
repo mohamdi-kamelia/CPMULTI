@@ -89,4 +89,18 @@ namespace traitement {
         return rotatedImage;
     }
 
+    // 🔹 🚀 Fonction pour exécuter tous les filtres de manière séquentielle
+    void processFiltersSequential(const cv::Mat& image, std::vector<cv::Mat>& results) {
+        results.clear(); // Nettoyer le vecteur avant d'ajouter les résultats
+
+        results.push_back(applyGaussianBlur(image, 5));   // Flou Gaussien
+        results.push_back(applyMedianBlur(image, 5));     // Filtre Médian
+        results.push_back(applyDenoising(image));         // Débruitage
+        results.push_back(applyEdgeDetection(image, 100, 200)); // Détection de contours Canny
+        results.push_back(applySobelEdgeDetection(image)); // Détection de contours Sobel
+        results.push_back(applyFourierTransform(image));  // Transformation de Fourier
+        results.push_back(resizeImage(image, 0.5));       // Redimensionnement
+        results.push_back(rotateImage(image, 45));        // Rotation
+    }
+
 }

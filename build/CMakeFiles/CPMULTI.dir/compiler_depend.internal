@@ -3,6 +3,7 @@
 
 CMakeFiles/CPMULTI.dir/main.cpp.obj
  C:/Users/kamil/OneDrive/Bureau/CPMULTI/main.cpp
+ C:/Users/kamil/OneDrive/Bureau/CPMULTI/traitement/traitement.hpp
  C:/msys64/ucrt64/include/_mingw.h
  C:/msys64/ucrt64/include/_mingw_mac.h
  C:/msys64/ucrt64/include/_mingw_off_t.h
@@ -368,8 +369,6 @@ CMakeFiles/CPMULTI.dir/main.cpp.obj
  C:/opencv-4.11.0/opencv-4.11.0/modules/videoio/include/opencv2/videoio.hpp
  C:/Users/kamil/OneDrive/Bureau/CPMULTI/multithreading/index.hpp
  C:/Users/kamil/OneDrive/Bureau/CPMULTI/multithreading/multithreading.hpp
- C:/Users/kamil/OneDrive/Bureau/CPMULTI/traitement/index.hpp
- C:/Users/kamil/OneDrive/Bureau/CPMULTI/traitement/traitement.hpp
  C:/Users/kamil/OneDrive/Bureau/CPMULTI/utilitaires/index.hpp
  C:/Users/kamil/OneDrive/Bureau/CPMULTI/utilitaires/utils.hpp
 
