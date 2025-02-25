@@ -6,7 +6,7 @@
 #include "utilitaires/index.hpp"
 #include "multithreading/index.hpp"
 
-// 🔹 Fonction pour afficher un graphique avec OpenCV quand on appuie sur "G"
+// Fonction pour afficher un graphique avec OpenCV avec axes et labels
 void afficherGraphiqueOpenCV(long timeSeq, long timeMT) {
     int largeur = 600, hauteur = 400;
     cv::Mat graphe = cv::Mat::zeros(hauteur, largeur, CV_8UC3);
@@ -14,24 +14,38 @@ void afficherGraphiqueOpenCV(long timeSeq, long timeMT) {
     // Définition des couleurs
     cv::Scalar couleurSeq(255, 0, 0);  // Bleu pour Séquentiel
     cv::Scalar couleurMT(0, 255, 0);   // Vert pour Multi-threading
+    cv::Scalar couleurAxes(255, 255, 255); // Blanc pour les axes
 
     // Normalisation des valeurs
     int maxTemps = std::max(timeSeq, timeMT);
-    int hauteurSeq = (timeSeq * (hauteur - 50)) / maxTemps;
-    int hauteurMT = (timeMT * (hauteur - 50)) / maxTemps;
+    int hauteurSeq = (timeSeq * (hauteur - 100)) / maxTemps; // -100 pour laisser la place aux labels
+    int hauteurMT = (timeMT * (hauteur - 100)) / maxTemps;
 
     // Position des barres
     int largeurBarre = 100;
     int espace = 150;
 
-    // Dessiner les barres
-    cv::rectangle(graphe, cv::Point(espace, hauteur - hauteurSeq), cv::Point(espace + largeurBarre, hauteur), couleurSeq, -1);
-    cv::rectangle(graphe, cv::Point(espace * 2, hauteur - hauteurMT), cv::Point(espace * 2 + largeurBarre, hauteur), couleurMT, -1);
+    // 🔹 Dessiner les axes (Y = Temps, X = Labels)
+    cv::line(graphe, cv::Point(50, 50), cv::Point(50, hauteur - 50), couleurAxes, 2); // Axe Y
+    cv::line(graphe, cv::Point(50, hauteur - 50), cv::Point(largeur - 50, hauteur - 50), couleurAxes, 2); // Axe X
 
-    // Ajouter les légendes
-    cv::putText(graphe, "Seq", cv::Point(espace + 20, hauteur - hauteurSeq - 10), cv::FONT_HERSHEY_SIMPLEX, 0.8, couleurSeq, 2);
-    cv::putText(graphe, "MT", cv::Point(espace * 2 + 20, hauteur - hauteurMT - 10), cv::FONT_HERSHEY_SIMPLEX, 0.8, couleurMT, 2);
-    cv::putText(graphe, "Temps (ms)", cv::Point(10, 30), cv::FONT_HERSHEY_SIMPLEX, 0.7, cv::Scalar(255, 255, 255), 2);
+    // 🔹 Ajouter les valeurs sur l'axe Y (temps)
+    for (int i = 0; i <= 5; ++i) { // 5 niveaux pour l'échelle
+        int y = hauteur - 50 - (i * (hauteur - 100) / 5);
+        int valeur = (maxTemps * i) / 5;
+        cv::putText(graphe, std::to_string(valeur) + " ms", cv::Point(5, y), cv::FONT_HERSHEY_SIMPLEX, 0.5, couleurAxes, 1);
+    }
+
+    // 🔹 Dessiner les barres
+    cv::rectangle(graphe, cv::Point(espace, hauteur - 50 - hauteurSeq), cv::Point(espace + largeurBarre, hauteur - 50), couleurSeq, -1);
+    cv::rectangle(graphe, cv::Point(espace * 2, hauteur - 50 - hauteurMT), cv::Point(espace * 2 + largeurBarre, hauteur - 50), couleurMT, -1);
+
+    // 🔹 Ajouter les légendes sous les barres (labels X)
+    cv::putText(graphe, "Seq", cv::Point(espace + 30, hauteur - 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, couleurSeq, 2);
+    cv::putText(graphe, "MT", cv::Point(espace * 2 + 30, hauteur - 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, couleurMT, 2);
+
+    // 🔹 Ajouter un titre
+    cv::putText(graphe, "Comparaison des Temps d'Execution", cv::Point(100, 30), cv::FONT_HERSHEY_SIMPLEX, 0.8, couleurAxes, 2);
 
     // Affichage du graphique
     cv::imshow("Comparaison des performances", graphe);
@@ -80,12 +94,12 @@ int main() {
 
     // 🔹 Attendre l'appui sur "G" pour afficher le graphique
     std::cout << "Appuyez sur 'G' pour afficher le graphique, ou 'ESC' pour quitter.\n";
-    
+
     while (true) {
-        int key = cv::waitKey(0); // Attend une touche
+        int key = cv::waitKey(0);
         if (key == 'g' || key == 'G') {
             afficherGraphiqueOpenCV(timeSeq, timeMT);
-        } else if (key == 27) { // Touche ESC
+        } else if (key == 27) { // Touche ESC pour quitter
             break;
         }
     }
